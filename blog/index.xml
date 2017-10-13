@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Mark Renzo Santiago</title>
+    <link>http://markrenzosantiago.com/blog/</link>
+    <description>Recent content in Blogs on Mark Renzo Santiago</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 02 Sep 2017 17:33:54 -0700</lastBuildDate>
+    
+	<atom:link href="http://markrenzosantiago.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build and deploy a static website with Hugo</title>
+      <link>http://markrenzosantiago.com/blog/one/</link>
+      <pubDate>Sat, 02 Sep 2017 17:33:54 -0700</pubDate>
+      
+      <guid>http://markrenzosantiago.com/blog/one/</guid>
+      <description>Overview Here is a list of technologies we will be using in this article:
+ Hugo (Static-site generator) Github/Github-Pages (Hosting)  Let&amp;rsquo;s get started!
+Setting up Github Github offers Free hosting for static pages, so we&amp;rsquo;ll be using that for our workflow and hosting our personal site.
+Navigate to github and create the repository that will hold your static files with the name:
+[your-github-username].github.io  Don&amp;rsquo;t clone your repo yet; we&amp;rsquo;ll get to that soon.</description>
+    </item>
+    
+  </channel>
+</rss>

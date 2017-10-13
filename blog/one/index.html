@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="B.S of Computer Science and Engineering @ The University of California, Merced">
+    <link rel="shortcut icon" type="image/x-icon" href="http://markrenzosantiago.comimg/favicon.ico">
+    <title>Build and deploy a static website with Hugo</title>
+    <meta name="generator" content="Hugo 0.26" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://markrenzosantiago.comcss/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="http://markrenzosantiago.com"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="http://markrenzosantiago.com/blog/one/">Build and deploy a static website with Hugo</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          September 2, 2017
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<h2 id="overview">Overview</h2>
+
+<p>Here is a list of technologies we will be using in this article:</p>
+
+<ol>
+<li>Hugo (Static-site generator)</li>
+<li>Github/Github-Pages (Hosting)</li>
+</ol>
+
+<p>Let&rsquo;s get started!</p>
+
+<h2 id="setting-up-github">Setting up Github</h2>
+
+<p>Github offers <strong>Free</strong> hosting for static pages, so we&rsquo;ll be using that for our workflow and hosting our personal site.</p>
+
+<p>Navigate to <a href="github.com">github</a> and create the repository that will hold your static files with the name:</p>
+
+<pre><code class="language-plaintext">[your-github-username].github.io 
+</code></pre>
+
+<p>Don&rsquo;t clone your repo yet; we&rsquo;ll get to that soon.</p>
+
+<p>Awesome! Your github is all set and now we can start installing Hugo.</p>
+
+<h2 id="installing-hugo">Installing Hugo</h2>
+
+<p>For the sake of convenience, I will use the instructions on the Hugo Website.</p>
+
+<h3 id="brew-installation">Brew installation:</h3>
+
+<pre><code class="language-plaintext">brew install hugo 
+</code></pre>
+
+<p>You can see all the available commands with:</p>
+
+<pre><code class="language-plaintext">hugo --help 
+</code></pre>
+
+<h3 id="creating-your-first-hugo-site">Creating your first Hugo site</h3>
+
+<p>Make sure you are inside of your personal website directory before continuing.</p>
+
+<p>Run the following command to create your Hugo instance</p>
+
+<pre><code class="language-plaintext">hugo new site [your website name] 
+</code></pre>
+
+<p>Congrats! You now have Hugo set up.</p>
+
+<h3 id="adding-a-hugo-theme">Adding a Hugo Theme</h3>
+
+<p>You can find all the hugo themese <a href="https://themes.gohugo.io/">Here</a>.</p>
+
+<p>When you have found your theme, you can add the theme in your <strong>themes</strong> folder as a submodule with the following command:</p>
+
+<pre><code class="language-plaintext">git submodule add [theme-http-url] themes/[theme-name]; 
+</code></pre>
+
+<p>This will help us deploy our hugo site easily later on.</p>
+
+<p>Now that we have our theme, we will need to build our site with the theme. Run the command:</p>
+
+<pre><code class="language-plaintext">hugo -t [theme-name]
+</code></pre>
+
+<p><strong>Note</strong>: you don&rsquo;t need to specify theme/[theme-name]. Hugo will search for the specified theme name inside of the theme folder!</p>
+
+<h3 id="running-the-local-server">Running the local server</h3>
+
+<p>Let&rsquo;s see what our beautiful website looks like! Run the following command:</p>
+
+<pre><code class="language-plaintext">hugo server -D
+</code></pre>
+
+<p>This will build all drafted content and start our server.</p>
+
+<p>Open up your favorite browser and navigate to:</p>
+
+<pre><code class="language-url">localhost:1313
+</code></pre>
+
+<h2 id="deploying-your-hugo-web-page">Deploying your Hugo Web Page</h2>
+
+<p>After running the server and building your webpage, a public directory will be generated which contains all the necessary files for your website like the
+<em>index.html</em>, <em>css files</em>, etc.</p>
+
+<p>Github only servers static websites and looks for an index.html to serve to your visiters. Therefore, we need to initialize your main repo inside of the <code>public/</code> folder.</p>
+
+<p>Go ahead and initialize a git local repo inside of the <code>public/</code> directory:</p>
+
+<pre><code class="language-plaintext">git init
+</code></pre>
+
+<p>Add all the files inside of your local repo and commit your changes</p>
+
+<pre><code class="language-plaintext">git add . 
+
+git commit -m &quot;Describe your changes&quot;
+</code></pre>
+
+<p>Now lets set the remote URL of your repo</p>
+
+<pre><code class="language-plaintext">git remote add origin [remote-repository-URL]
+
+git remote -v
+</code></pre>
+
+<p>All connected! Let&rsquo;s push our changes to master</p>
+
+<pre><code class="language-plaintext">git push -u origin master
+</code></pre>
+
+<p>Awesome! Our website should be live in 1-2 minutes. go ahead and navigate to [github-username].github.io to see your new website.</p>
+
+<h2 id="wrapping-up">Wrapping Up</h2>
+
+<p>Now that you have a website you might want to set up a custom DNS. Depending on your DNS Provider, you will need to follow specific instructions through
+their own tutorials. I&rsquo;ll post a tutorial on setting up the DNS with namecheap in another article.</p>
+
+<p>Happy learning!</p>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://markrenzosantiago.comjs/docs.min.js"></script>
+<script src="http://markrenzosantiago.comjs/main.js"></script>
+
+<script src="http://markrenzosantiago.comjs/ie10-viewport-bug-workaround.js"></script>
+
+
+    
+  </body>
+</html>
