@@ -64,9 +64,17 @@
             <div class="blogpost">
               
 
-<p>Okay, it wasn&rsquo;t exactly a strict 5 hours, but I spent around 3 hours prior to development, planning and collecting resources to use for development.</p>
+<p>Okay, it wasn&rsquo;t exactly 5 hours, but I spent around 3 hours prior to development, planning and collecting resources to use.</p>
 
 <p>The goal of this challenge was to build a league of legends stats app using only my full stack Javascript knowledge (fun!)</p>
+
+<p><strong>Quicklinks:</strong></p>
+
+<p>Example Clone: <a href="https://na.op.gg">https://na.op.gg</a></p>
+
+<p>Github: <a href="https://github.com/zzmarkzz321/LolFY">https://github.com/zzmarkzz321/LolFY</a></p>
+
+<p>Demo: <a href="https://infinite-taiga-91550.herokuapp.com/">https://infinite-taiga-91550.herokuapp.com/</a></p>
 
 <h1 id="hours-1-2-and-3"><strong>Hours 1, 2, and 3</strong></h1>
 
@@ -82,7 +90,7 @@
 
 <p>One of the things I enjoyed about this project was being able to take the time to read up on Riot&rsquo;s API. I&rsquo;ve always wanted to use it, but I never found the motivation nor the time to look at it myself.</p>
 
-<p>The documentation overall is very straightforward, but collecting the correct data was the slight tricky part.</p>
+<p>The documentation overall is very straightforward, but collecting the correct data was slightly tricky.</p>
 
 <ul>
 <li><p>I needed match data from a given summoner. This was provided to us with this amazing endpoint that returned a JSON of A LOT of data from a single game:
@@ -117,7 +125,7 @@ The thing about this endpoint, was that it returned the last 20 games along with
 <li>Services</li>
 </ol>
 
-<p>Within the routes folder, we have the express routes which defined the endpoints that the client would have access to. Finally the controllers within the routes folder would define which services to use.</p>
+<p>Within the routes folder, we have the express routes which defined the endpoints that the client would have access to. Finally the controllers within the routes folder would define which services to use and return the JSON of required summoner data back to the requester.</p>
 
 <p>Inside the service folder, there exist only one service, and this service alone performs all the necessary calls to RIOT&rsquo;s APIs.</p>
 
@@ -159,7 +167,7 @@ The thing about this endpoint, was that it returned the last 20 games along with
 
 <h2 id="the-good"><strong>The good&hellip;</strong></h2>
 
-<p>The task overall was a really great experience! Not only was I able to use Riot&rsquo;s API for the first time, but I was able to test myself on developing an application within 5 hours.</p>
+<p>The task alone was a really great experience! Not only was I able to use Riot&rsquo;s API for the first time, but I was able to test myself on developing an application within 5 hours.</p>
 
 <p>What&rsquo;s even better was that I was able to brush up some &ldquo;old&rdquo; technologies like Axios (Promise based HTTP).</p>
 
@@ -167,7 +175,7 @@ The thing about this endpoint, was that it returned the last 20 games along with
 
 <p>Okay, I&rsquo;ll admit it; I&rsquo;m really slow when it comes the UI, and sometimes the end result wouldn&rsquo;t even be close to &ldquo;beautiful&rdquo;.</p>
 
-<p>Also the result page was (not pretty at all), and sadly, I was only able to pass mock data through the application.</p>
+<p>Also the result page was not the prettiest, and sadly, I was only able to pass mock data through the application.</p>
 
 <h2 id="refactoring-optimization-and-future-upgrades-to-implement"><strong>Refactoring, optimization, and future upgrades to implement</strong></h2>
 
@@ -177,14 +185,32 @@ The thing about this endpoint, was that it returned the last 20 games along with
 
 <ol>
 <li>Since I was given a short amount of time, I should have focused more on functionality than UI.</li>
-<li>Store the formatted data in a MongoDB database to prevent redundant calls to Riot&rsquo;s API.</li>
+<li>Store the formatted data in a MongoDB database to prevent redundant calls to Riot&rsquo;s API. (Or use caching)</li>
+<li>Organize and break down the UI components better. This means finding a good design pattern for structuring components.</li>
+<li>Isolate the functionality of my code more. For example, rather than handling the API call and rendering of data in one file, I would isolate both.</li>
 </ol>
+
+<h2 id="last-but-not-least-the-learning-outcome"><strong>Last but not least, the learning outcome</strong></h2>
+
+<p>One can learn a lot from trying to develop an app within 5 hours. One of the biggest things I learned during this time was <strong>to spend a lot of time designing and refactoring your designs prior to developing</strong>.</p>
+
+<p>I can&rsquo;t emphasis how much time I would have saved if I spent an extra hour planning the architecture and designing the UI.</p>
+
+<p>This leads into the next biggest lesson: <strong>Prioritize properly</strong>. This will never be an issue if you spend a good chunk of time properly designing and planning!</p>
+
+<p>And finally, a necessary lesson to point out from this experience: <strong>You wont make a full fledge app in 5 hours and that&rsquo;s okay</strong>. I noticed that one of my biggest pitfalls was falling in temptation to fiddle with the UI. A lot.</p>
+
+<p>Rapid development is not that bad of a software design paradigm, but for something like this challenge, I would recommend waterfall: Spend time designing prior to development!</p>
 
 <hr />
 
-<p>There you have it! Hope you enjoyed the article!</p>
+<p>Overall, I can definitely say that I had fun building this mini application. Although I was not able to complete it within the 5 hours, I have not given up on it and will continue to work on it on my free time!</p>
 
-<p>And now, it&rsquo;s back to climbing that stupid ladder.</p>
+<p>Big shout out to <a href="https://www.battlefy.com">BattleFY</a> for the challenge; without this push, I probably would have waiting until the end of time to look at Riot&rsquo;s API.</p>
+
+<p>Hope you enjoyed the article!</p>
+
+<p>And now, back to climbing that stupid ladder.</p>
 
               <hr>
               <div class="related-posts">
