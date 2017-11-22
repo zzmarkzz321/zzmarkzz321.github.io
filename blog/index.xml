@@ -6,10 +6,22 @@
     <description>Recent content in Blogs on Mark Renzo Santiago</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 02 Sep 2017 17:33:54 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2017 17:55:26 -0800</lastBuildDate>
     
 	<atom:link href="http://markrenzosantiago.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning from Rapid Development: Building a mini LoL stats App in 5 hours</title>
+      <link>http://markrenzosantiago.com/blog/two/</link>
+      <pubDate>Tue, 21 Nov 2017 17:55:26 -0800</pubDate>
+      
+      <guid>http://markrenzosantiago.com/blog/two/</guid>
+      <description>Okay, it wasn&amp;rsquo;t exactly a strict 5 hours, but I spent around 3 hours prior to development, planning and collecting resources to use for development.
+The goal of this challenge was to build a league of legends stats app using only my full stack Javascript knowledge (fun!)
+Hours 1, 2, and 3 After receiving the task, I outlined the 3 main things I needed to research:
+ Riot Games API NodeJS and ReactJS boilerplates Which project architecture would suit this project  The Riot API One of the things I enjoyed about this project was being able to take the time to read up on Riot&amp;rsquo;s API.</description>
+    </item>
     
     <item>
       <title>Build and deploy a static website with Hugo</title>
