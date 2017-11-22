@@ -17,10 +17,13 @@
       <pubDate>Tue, 21 Nov 2017 17:55:26 -0800</pubDate>
       
       <guid>http://markrenzosantiago.com/blog/two/</guid>
-      <description>Okay, it wasn&amp;rsquo;t exactly a strict 5 hours, but I spent around 3 hours prior to development, planning and collecting resources to use for development.
+      <description>Okay, it wasn&amp;rsquo;t exactly 5 hours, but I spent around 3 hours prior to development, planning and collecting resources to use.
 The goal of this challenge was to build a league of legends stats app using only my full stack Javascript knowledge (fun!)
-Hours 1, 2, and 3 After receiving the task, I outlined the 3 main things I needed to research:
- Riot Games API NodeJS and ReactJS boilerplates Which project architecture would suit this project  The Riot API One of the things I enjoyed about this project was being able to take the time to read up on Riot&amp;rsquo;s API.</description>
+Quicklinks:
+Example Clone: https://na.op.gg
+Github: https://github.com/zzmarkzz321/LolFY
+Demo: https://infinite-taiga-91550.herokuapp.com/
+Hours 1, 2, and 3 After receiving the task, I outlined the 3 main things I needed to research:</description>
     </item>
     
     <item>
