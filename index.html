@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
+<html>
+<head>
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="map[]" />
+    <meta name="author" content="Mark Renzo Santiago" />
     <meta name="description" content="B.S of Computer Science and Engineering @ The University of California, Merced">
     <link rel="shortcut icon" type="image/x-icon" href="http://markrenzosantiago.com/img/favicon.ico">
+
     <title>Mark Renzo Santiago</title>
-    <meta name="generator" content="Hugo 0.26" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="http://markrenzosantiago.com/css/main.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
     
@@ -19,97 +19,84 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	  
-	  <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	 <script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-105621347-1', 'auto');
+	ga('send', 'pageview');
+	</script>
 
-ga('create', 'UA-105621347-1', 'auto');
-ga('send', 'pageview');
-</script>
+	<style type="text/css">
 
-    
-  </head>
+		.btn a {
+			text-decoration: none;
+			color: white;
+		}
 
-  <body>
-    <div id="wrap">
-      <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="http://markrenzosantiago.com/"><i class="fa fa-home"></i></a>
-    </div>
-    <div id="navbar">
-      <ul class="nav navbar-nav navbar-right">
-      
-        
-        <li><a href="/blog/">BLOG</a></li>
-        
-        <li><a href="/projects/">PROJECTS</a></li>
-        
-      
-      </ul>
-    </div>
-  </div>
-</nav>
+		.section {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0 4%;
+		}
 
-      <section id="about">
-        <div class="container">
-        <div class="avatar">
-          <img class="img-circle" src="http://markrenzosantiago.com/img/moi.png" alt="-">
-        </div>
-        <h3>I'm <strong>Mark Renzo Santiago</strong>, a Software Engineer.</h3>
-        <h3>B.S Computer Science @ The University of California, Merced</h3>
-        <hr>
-        <h3>Have a look at some of my <a href="http://markrenzosantiago.com/projects/"> projects</a>.</h3>
-        <h3>For more info, check out my academic &amp; professional <a href="http://markrenzosantiago.com/Mark-Santiago-Resume.pdf/">resume</a>.</h3>
-        <h3>Contact me <a href="http://twitter.com/mark_and_sweep">@mark_and_sweep</a> or by <a href="mailto:msantiago8@ucmerced.edu">email</a>.</h3>
-        <div class="social">
-  <ul class="social-links">
-    
-      <li><a href="http://github.com/zzmarkzz321"><i class="fa fa-github"></i></a></li>
-    
+		.section__about {
+			text-align: center;
+			margin: 3% 0% 3% 0%;
+		}
 
-    
-      <li><a href="mailto:msantiago8@ucmerced.edu"><i class="fa fa-envelope"></i></a></li>
-    
+		.heading {
+			margin-bottom: 3%;
+		}
 
-    
-      <li><a href="http://twitter.com/mark_and_sweep"><i class="fa fa-twitter"></i></a></li>
-    
+		.section__social {
+			list-style: none;
+			display: inline-flex;
+			justify-content: space-evenly;
+			width: 100%;
+			padding: 0 30%
+		}
 
-    
-      <li><a href="http://linkedin.com/in/markrenzosantiago"><i class="fa fa-linkedin"></i></a></li>
-    
+		.nav {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-end;
+			padding: 3%;
+		}
 
-    
-      <li><a href="http://stackoverflow.com/mark-renzo-santiago"><i class="fa fa-stack-overflow"></i></a></li>
-    
-  </ul>
-</div>
+		.status {
+			color: #1fc600;
+		}
+	</style>
+</head>
+<body>
 
-        </div>
-      </section>
-    </div>
-    <footer>
-  <div id="footer">
-    <div class="container">
-      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
-      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
-    </div>
-  </div>
-</footer>
-<div class="footer"></div>
+	<nav class="nav">
+		<button type="button" class="btn btn-warning"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"> Don't Click </a></button>
+	</nav>
 
+	<section class="section section__about">
+		<h3 class="heading">Welcome to my little corner of the Internet</h3>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<p>My name is <strong>Mark Renzo Manuel Santiago</strong> (Just call me Mark)</p>
+		<p>I'm a <strong>Software Engineer</strong> with a <strong>BS</strong> in <strong>Computer Science and Engineering @ UC Merced</strong></p>
+		<p>Check out some of the <a href="http://github.com/zzmarkzz321" target="_blank">cool stuff</a> I've worked on</p>
+		<p>For more info about my professional experience, check out my <a href="http://www.markrenzosantiago.com/Mark-Santiago-Resume.pdf" target="_blank">Resume</a></p>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="http://markrenzosantiago.com/js/docs.min.js"></script>
-<script src="http://markrenzosantiago.com/js/main.js"></script>
+		<p class="status">Status: Available for Hire</p>
+	</section>
+	<section class="section">
+		<ul class="section__social">
+			<li><a href="http://github.com/zzmarkzz321" target="_blank"><i class="fa fa-github"></i></a></li>
+			<li><a href="mailto:msantiago8@ucmerced.edu" target="_blank"><i class="fa fa-envelope"></i></a></li>
+			<li><a href="http://twitter.com/mark_and_sweep" target="_blank"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="http://linkedin.com/in/markrenzosantiago" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="http://stackoverflow.com/mark-renzo-santiago" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+		</ul>
+	</section>
 
-<script src="http://markrenzosantiago.com/js/ie10-viewport-bug-workaround.js"></script>
-
-
-  </body>
+</body>
 </html>
