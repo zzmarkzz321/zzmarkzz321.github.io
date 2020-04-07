@@ -1,6 +1,64 @@
-#wrapper {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: flex-start;
+body {
+    font-family: georgia, serif;
 }
+
+#wrapper {
+    margin: 10% auto 0;
+    max-width: 1400px;
+    padding: 0px 1.0875rem 1.45rem;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+.about-paragraph {
+    font-size: 2em;
+    line-height: 50px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.social-icon {
+    font-size: 30px;
+}
+
+.social-icons-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+}
+
+.lively-link {
+    color: rgb(195, 11, 85);
+}
+
+.fade-in {
+    opacity: 1;
+    animation: 1 ease-in 500ms fadeInOpacity;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
