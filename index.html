@@ -35,6 +35,10 @@
 </head>
 <body>
     <div>
+        <div class='toggle toggle--dark'>
+            <i class="icon far fa-sun" onclick="changeTheme('light')"></i>
+            <i class="icon fas fa-moon" onclick="changeTheme('dark')"></i>
+        </div>
         <main id="wrapper" class="fade-in">
             <h1 id='greeting'>Hi, I'm Mark</h1>
             <p class='about-paragraph'>B.S in Computer Science from the <strong>University of California, Merced</strong></p>
@@ -43,22 +47,67 @@
 
             <div class='social-icons-wrapper'>
                 <a class='link social-icon' href="https://www.linkedin.com/in/markrenzosantiago/" target="_blank" rel="noopener nofollow noreferrer">
-                    <i class="fab fa-linkedin"></i>
+                    <i class="icon fab fa-linkedin"></i>
                 </a>
                 <a class='link social-icon' href="https://www.github.com/zzmarkzz321" target="_blank" rel="noopener nofollow noreferrer">
-                    <i class="fab fa-github-square"></i>
+                    <i class="icon fab fa-github-square"></i>
                 </a>
                 <a class='link social-icon' href="https://medium.com/@mrsantiago" target="_blank" rel="noopener nofollow noreferrer">
-                    <i class="fab fa-medium"></i>
+                    <i class="icon fab fa-medium"></i>
                 </a>
                 <a class='link social-icon' href="http://www.mrsantiago.dev/assets/Mark-Santiagos-Resume.pdf" target="_blank" rel="noopener nofollow noreferrer">
-                    <i class="fas fa-file"></i>
+                    <i class="icon fas fa-file"></i>
                 </a>
             </div>
         </main>
         <footer>
-            Made with plain ol' HTML + CSS + JS <3
+            Made with plain ol' HTML + CSS + JS
         </footer>
     </div><!-- Wrapper -->
 </body>
+
+<script>
+    function getAndSetTheme() {
+        const theme = localStorage.getItem('theme') || 'light';
+        if (!theme) {
+            localStorage.setItem('theme', 'light');
+        }
+
+        switch(theme) {
+            case 'light': {
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+
+                const toggle = document.querySelector('.toggle--dark');
+                toggle.classList.replace('toggle--dark', 'toggle--light');
+
+                const icons = document.querySelectorAll('.icon');
+                icons.forEach((i) => {
+                    i.style.color = 'black';
+                });
+                break;
+            }
+            case 'dark': {
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+
+                const toggle = document.querySelector('.toggle--light');
+                toggle.classList.replace('toggle--light', 'toggle--dark');
+
+                const icons = document.querySelectorAll('.icon');
+                icons.forEach((i) => {
+                    i.style.color = 'white';
+                });
+                break;
+            }
+        }
+    }
+
+    getAndSetTheme();
+
+    function changeTheme(theme) {
+        localStorage.setItem('theme', theme);
+        return getAndSetTheme();
+    }
+</script>
 </html>
